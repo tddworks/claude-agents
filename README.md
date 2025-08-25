@@ -8,8 +8,21 @@ This repository contains intelligent agents designed to work with [Claude Code](
 
 ## Available Agents
 
+### 🧠 Cynefin Decision Framework Agent
+**File**: `decision-making/cynefin-decision-framework-agent.md`
+
+A specialized Task Organization specialist that uses the Cynefin framework to help categorize problems and guide decision-making approaches. This agent excels at:
+
+- **Problem Categorization**: Sort tasks into appropriate Cynefin domains
+- **Task Breakdown**: Decompose complex tasks into manageable components
+- **Task Grouping**: Organize related tasks by domain and execution strategy
+- **Execution Strategy**: Recommend domain-appropriate approaches for task completion
+- **Priority Management**: Help users sequence tasks based on domain characteristics and dependencies
+
+Perfect for when you're facing complex decisions, unclear problem scope, or need help organizing and prioritizing work based on complexity and context.
+
 ### 🏗️ TDD Chicago School Kotlin Agent
-**File**: `tdd-chicago-school-kotlin.md`
+**File**: `testing/tdd-chicago-school-kotlin.md`
 
 A Test-Driven Development specialist following the Chicago School (classicist) approach for Kotlin development. This agent emphasizes:
 
@@ -22,7 +35,7 @@ A Test-Driven Development specialist following the Chicago School (classicist) a
 Perfect for developers who want to practice disciplined TDD with a focus on state verification and clean, testable code architecture.
 
 ### 🎨 ASCII UI Prototype Agent  
-**File**: `ui-ascii-prototype.md`
+**File**: `design/ui-ascii-prototype.md`
 
 A UI/UX design specialist focused on creating ASCII-based wireframes, mockups, and prototypes. This agent excels at:
 
@@ -73,11 +86,25 @@ These agents integrate with Claude Code's agent system. Each `.md` file defines 
 
 ### Usage Examples
 
+#### Using the Cynefin Decision Framework Agent
+
+```bash
+# When facing complex decisions or unclear problem scope
+claude-code --agent decision-making/cynefin-decision-framework-agent.md "Help me organize this complex task list and determine the best approach"
+```
+
+The agent will:
+- Categorize problems using the Cynefin framework
+- Break down complex tasks into manageable components
+- Recommend domain-appropriate execution strategies
+- Help prioritize work based on complexity and dependencies
+- Guide you through uncertainty with structured decision-making
+
 #### Using the TDD Chicago School Kotlin Agent
 
 ```bash
 # In your Kotlin project directory
-claude-code --agent tdd-chicago-school-kotlin.md "Help me implement a user registration feature using TDD"
+claude-code --agent testing/tdd-chicago-school-kotlin.md "Help me implement a user registration feature using TDD"
 ```
 
 The agent will:
@@ -91,7 +118,7 @@ The agent will:
 
 ```bash
 # In your project directory  
-claude-code --agent ui-ascii-prototype.md "Create wireframes for a user dashboard"
+claude-code --agent design/ui-ascii-prototype.md "Create wireframes for a user dashboard"
 ```
 
 The agent will:
